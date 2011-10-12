@@ -1,0 +1,20 @@
+README
+comcheck 0.1
+
+comcheck is a simple script to check the availability of .com domain names.
+
+Single check:
+>>    python comcheck.py
+      provides a prompt where you can enter your desired domain. Do not
+      include the .com
+>>    python comcheck.py test
+      checks the availability of "test.com"
+
+Bulk check:
+>>    python comcheck.py
+      checks for a dict.txt file in the local directory, and reads
+      individual lines of this as potential names, checking each.
+      The available names are written to available.txt, and if the
+      script execution is canceled (ctrl+c), the current index into
+      dict.txt is saved in last.txt. When run next, if last.txt
+      exists, checking automatically continues from that index.
